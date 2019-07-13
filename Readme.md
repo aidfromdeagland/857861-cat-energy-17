@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Станислав Ланюк](https://up.htmlacademy.ru/adaptive/17/user/857861).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Мишагин](https://htmlacademy.ru/profile/id118967).
 
 ---
 
