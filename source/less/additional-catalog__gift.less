@@ -1,0 +1,24 @@
+.additional-catalog__gift {
+  position: relative;
+  min-width: 280px;
+  min-height: 289px;
+  margin-top: 39px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background: url("../img/gift-photo-mobile@1x.jpg") no-repeat 50% 50%;
+  background-size: contain;
+}
+
+.additional-catalog__gift::before {
+  position: absolute;
+  width: 55px;
+  height: 60px;
+  left: calc(50% - 22px);
+  top: 65px;
+  content: "";
+  background: url("../img/icon-gift.svg") no-repeat;
+  filter: invert(100%);
+}
