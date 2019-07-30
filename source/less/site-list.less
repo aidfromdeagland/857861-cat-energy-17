@@ -8,4 +8,30 @@
   justify-content: center;
   align-items: center;
   background: white;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 65px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  &__item:nth-of-type(1) {
+    border-top: 1px solid #e6e6e6;
+  }
+
+  &__link {
+    font-size: 20px;
+    font-family: "Oswald-medium", "Arial", sans-serif;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #111111;
+  }
+
+  &__link--current {
+    text-decoration: none;
+  }
 }

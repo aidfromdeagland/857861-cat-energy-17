@@ -7,16 +7,34 @@
   align-items: center;
   padding: 20px 0;
   border-bottom: 1px solid #ededed;
-}
 
-.catalog-more::before {
-  position: absolute;
-  content: "";
-  width: 30px;
-  height: 30px;
-  top: 27px;
-  align-self: center;
-  background: url("../img/icon-plus-mobile.svg") no-repeat;
-  background-size: 30px 30px;
-  filter: opacity(0.5);
+  &::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    top: 27px;
+    align-self: center;
+    background: url("../img/icon-plus-mobile.svg") no-repeat;
+    background-size: 30px 30px;
+    opacity: 0.5;
+  }
+
+  &__text-primary {
+    margin-top: 60px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 20px;
+    color: #111111;
+    text-transform: uppercase;
+  }
+
+  &__text-secondary {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: #444444;
+  }
 }
