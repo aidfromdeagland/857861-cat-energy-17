@@ -1,17 +1,39 @@
 .working-principle {
   display: flex;
-  margin: 0;
+  margin: 0 20px;
   padding: 0;
   box-sizing: border-box;
   flex-direction: column;
+}
 
-  &__heading {
-    margin: 0;
-    margin-top: 10px;
-    padding: 0;
-    font-size: 36px;
-    line-height: 36px;
-    font-weight: normal;
-    color: #111111;
+.working-principle__heading {
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: normal;
+  color: #111111;
+}
+
+@media (min-width: 768px) {
+  .working-principle {
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .working-principle__heading {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .working-principle {
+    margin-top: 40px;
+    margin-left: 110px;
+    margin-right: 110px;
+    min-width: 1220px;
   }
 }

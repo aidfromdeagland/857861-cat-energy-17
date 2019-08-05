@@ -2,15 +2,22 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Подбор программы Кэт Энерджи</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
     <header class="page-header">
-      <a class="page-header__logo-link" href="index.html"><img class="page-header__logo-image" src="img/logo-mobile.svg" width="230" height="38" alt="Логотип «Cat energy»"></a>
+      <a class="page-header__logo-link" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="180" height="60" alt="Логотип «Cat energy»">
+        </picture>
+      </a>
       <button class="page-header__menu-btn" type="button">Главное меню</button>
-      <nav class="main-nav">
+      <nav class="page-header__nav main-nav">
         <ul class="site-list">
           <li class="site-list__item">
             <a class="site-list__link" href="index.html">Главная</a>
@@ -39,7 +46,7 @@
         <address class="page-footer__address">ул. Большая     Конюшенная, д. 19/8<br>Санкт-Петербург</address>
       </div>
       <!--айфрейм с картой-->
-      <a class="page-footer__logo-link" href="index.html"><img class="page-footer__logo-image" src="./img/logo-footer.svg" width="128" height="24" alt="Логотип «Cat energy»"></a>
+      <a class="page-footer__logo-link" href="index.html"><img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип «Cat energy»"></a>
       <ul class="social-list">
         <li class="social-list__item"><a class="social-list__link social-list__link--vk" href="#">Вконтакте</a></li>
         <li class="social-list__item"><a class="social-list__link social-list__link--insta" href="#">Instagram</a></li>
@@ -47,7 +54,7 @@
       </ul>
       <div class="copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="copyright__logo-link" href="https://htmlacademy.ru/intensive/adaptive"><img class="copyright__logo-img" src="./img/htmlacademy.svg" width="27" height="34" alt="Логотип «HTML Academy»"></a>
+        <a class="copyright__logo-link" href="https://htmlacademy.ru/intensive/adaptive"><img class="copyright__logo-img" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип «HTML Academy»"></a>
       </div>
     </footer>
   </body>
