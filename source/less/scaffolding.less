@@ -6,6 +6,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  max-width: 100%;
 }
 
 body {
@@ -25,3 +26,15 @@ img {
 a {
   text-decoration: none;
 }
+
+@media (min-width: 768px) {
+  body {
+    min-width: 768px;
+  }
+} //for IE11
+
+@media (min-width: 1440px) {
+  body {
+    min-width: 1440px;
+  }
+}   //for IE11

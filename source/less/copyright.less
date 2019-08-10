@@ -4,22 +4,41 @@
   display: flex;
   box-sizing: border-box;
   justify-content: space-between;
-  align-items: center;
 }
 
 .copyright__link {
+  vertical-align: middle;
   font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 16px;
   color: #444444;
   text-decoration: none;
+  margin-top: 31px;
+  margin-bottom: 31px;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__logo-img {
-  transform: scale(1.5);
+  width: 27px;
+  height: 34px;
+}
+
+.copyright__logo-img:hover path {
+  fill: #68b738;
+}
+
+.copyright__logo-img:active path {
+  fill: #68b738;
+  opacity: 0.3;
 }
 
 .copyright__logo-link {
+  margin-top: 22px;
+  margin-bottom: 22px;
+  min-height: 34px;
   font-size: 0;
   color: transparent;
 }

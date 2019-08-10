@@ -3,17 +3,45 @@
   box-sizing: border-box;
   width: 280px;
   min-height: 40px;
+  padding-top: 0.625em;
+  padding-bottom: 0.625em;
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
   text-transform: uppercase;
-  color: white;
+  color: #ffffff;
   background: #68b738;
   justify-content: center;
   align-items: center;
+
+  &:hover {
+    background: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .btn--secondary {
   background: #f2f2f2;
   color: #444444;
+
+  &:hover {
+    background: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
+}
+
+@media (min-width: 768px) {
+  .btn {
+    width: 249px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

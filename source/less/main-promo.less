@@ -2,6 +2,7 @@
   position: relative;
   margin-left: 20px;
   margin-right: 20px;
+  max-width: calc(100% - 40px); // for IE11 mobile
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -27,6 +28,8 @@
 .main-promo__program-link {
   display: flex;
   box-sizing: border-box;
+  padding-top: 0.78em;
+  padding-bottom: 0.78em;
   font-size: 14px;
   line-height: 18px;
   outline: 2px solid #ffffff;
@@ -66,8 +69,9 @@
     left: 87px;
     top: 120px;
     width: 245px;
-    min-height: 52px;
-    font-size: 20px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 16px;
     line-height: 20px;
     outline: none;
   }
