@@ -74,6 +74,23 @@
   color: #111111;
   text-decoration: none;
   text-transform: uppercase;
+
+  &:hover::after {
+    width: 33px;
+    height: 11px;
+    background: url("../img/icon-right-arrow-verylong.svg")   no-repeat;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:active::after {
+    width: 33px;
+    height: 11px;
+    background: url("../img/icon-right-arrow-verylong.svg") no-repeat;
+    opacity: 0.3;
+  }
 }
 
 .programs-item__link::after {
