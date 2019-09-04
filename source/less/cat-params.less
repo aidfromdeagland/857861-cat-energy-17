@@ -175,28 +175,33 @@
 @media (min-width: 1440px) {
   .cat-params {
     margin: 0;
-    margin-top: 2em;
+    margin-top: 2.025em;
     margin-bottom: 3.5em;
     padding: 0;
+    display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     padding-left: 110px;
     padding-right: 110px;
   }
 
   .cat-params__info {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     min-width: 570px;
+    max-width: none;
     padding: 0;
-    flex-grow: 1;
   }
 
   .cat-params__choise {
     margin: 0;
     margin-left: 80px;
     min-width: 570px;
+    max-width: none;
+    display: flex;
     padding: 0;
     padding-top: 1.25em;
     padding-bottom: 1.25em;
-    flex-grow: 1;
   }
 }

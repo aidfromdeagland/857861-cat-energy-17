@@ -6,6 +6,10 @@
   overflow: hidden;
 }
 
+.program-form h2 {
+  font-weight: normal;
+}
+
 .program-form__brief {
   margin-left: 20px;
   width: 80%;
@@ -26,6 +30,7 @@
 }
 
 .program-form__comment-heading {
+  margin-top: 0;
   width: 100%;
   margin-bottom: 1.5em;
   padding: 0;
@@ -95,6 +100,7 @@
 
 .program-form__additional-heading {
   width: 100%;
+  margin-top: 0;
   margin-bottom: 1.4em;
   padding: 0;
   font-size: 24px;
@@ -236,7 +242,6 @@
   }
 
   .program-form__comment-area::placeholder {
-    padding: 0.6em 0.85em;
     font-size: 20px;
     line-height: 30px;
   }
@@ -324,11 +329,16 @@
 }
 
 @media (min-width: 1440px) {
+  .program-form {
+    padding-left: calc(50% - 720px);
+    padding-right: calc(50% - 720px);
+  }
+
   .program-form__brief {
     margin-top: 33px;
     margin-bottom: 24px;
     margin-left: 110px;
-    margin-right: 1100px;
+    margin-right: 110px;
     width: 25%;
   }
 
