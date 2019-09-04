@@ -21,7 +21,7 @@
 }
 
 .additional-list__link {
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   text-decoration: none;
 }
 
@@ -38,7 +38,7 @@
 .additional-list__table {
   width: 100%;
   margin: 0;
-  margin-bottom: 14px;
+  margin-bottom: 13px;
   padding: 0;
   font-family: "Arial", sans-serif;
   font-size: 14px;
@@ -55,4 +55,122 @@
   margin: 0;
   padding: 0;
   text-align: right;
+}
+
+@media (min-width: 768px) {
+  .additional-list {
+    width: 100%;
+  }
+
+  .additional-list__item {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    border: 1px solid #cdcdcd;
+  }
+
+  .additional-list__item:not(:first-of-type) {
+    border-top: none;
+  }
+
+  .additional-list__link {
+    width: 50%;
+    margin-bottom: 24px;
+  }
+
+  .additional-list__heading {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .additional-list__table {
+    width: 50%;
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .additional-list__table tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .additional-list__field {
+    text-align: right;
+  }
+
+  .additional-list__value {
+    min-width: 95px;
+  }
+
+  .additional-list__btn {
+    width: 100%;
+    min-height: 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .additional-list {
+    min-width: 895px;
+    margin-right: 80px;
+  }
+
+  .additional-list__item {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    padding-bottom: 16px;
+    border: none;
+    border-top: 1px solid #cdcdcd;
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .additional-list__link {
+    width: 25%;
+    margin-bottom: 0;
+  }
+
+  .additional-list__heading {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .additional-list__table {
+    width: 33%;
+    margin-left: 60px;
+    margin-top: 8px;
+  }
+
+  .additional-list__table tr {
+    display: flex;
+    width: 100%;
+  }
+
+  .additional-list__field {
+    width: 50%;
+    min-width: 0;
+    max-width: 50%;
+    display: block;
+    text-align: left;
+  }
+
+  .additional-list__value {
+    width: 50%;
+    min-width: 0;
+    max-width: 50%;
+    display: block;
+    text-align: right;
+  }
+
+  .additional-list__btn {
+    width: 245px;
+  }
 }

@@ -5,7 +5,10 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0 20px 20px 20px;
+  padding-top: 0;
+  padding-right: 20px;
+  padding-bottom: 24px;
+  padding-left: 20px;
   box-sizing: border-box;
   flex-wrap: wrap;
   border-bottom: 1px solid #e6e6e6;
@@ -34,17 +37,23 @@
 
 .product-card__link {
   display: flex;
+  padding: 0;
   text-decoration: none;
+}
+
+.product-card__link picture {
+  height: 144px;
 }
 
 .product-card__link-image {
   margin: 0;
+  height: 144px;
 }
 
 .product-card__info {
   min-width: 140px;
   width: 50%;
-  min-height: 144px;
+  min-height: 122px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -54,7 +63,8 @@
 .product-card__info--more {
   min-width: 220px;
   width: 100%;
-  padding-top: 60px;
+  padding-top: 67px;
+  padding-bottom: 20px;
   align-items: center;
 }
 
@@ -72,6 +82,8 @@
 }
 
 .product-card__heading {
+  margin-top: 0.75em;
+  margin-bottom: 0.5em;
   font-size: 16px;
   line-height: 20px;
   font-weight: normal;
@@ -96,7 +108,7 @@
   padding: 0;
   font-family: "Arial", sans-serif;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 15px;
   color: #444444;
   border: none;
 }
@@ -124,25 +136,27 @@
 @media (min-width: 768px) {
   .product-card {
     margin-top: 30px;
+    margin-bottom: 13px;
     margin-left: 30px;
     margin-right: 30px;
     width: 324px;
-    min-height: 541px;
+    min-height: 528px;
     flex-direction: column;
     justify-content: flex-start;
     flex-grow: 0;
-    padding-top: 20px;
+    padding-top: 14px;
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: 40px;
+    padding-bottom: 0;
     border: none;
     background: linear-gradient(to top, #f2f2f2 431px, transparent 431px);
   }
 
   .product-card--more {
-    margin-top: 140px;
-    min-height: 431px;
+    margin-top: 125px;
+    min-height: 20px;
     padding-top: 55px;
+    padding-bottom: 40px;
     background: none;
     border: 1px solid #e6e6e6;
 
@@ -163,6 +177,14 @@
     min-height: 208px;
     height: 1px; // for IE11 align-items implementation
     align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .product-card__link picture {
+    min-height: 208px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 
   .product-card__link-image {
@@ -171,15 +193,15 @@
   }
 
   .product-card__info {
-    margin-top: 10px;
-    margin-bottom: 30px;
+    margin-top: 22px;
+    margin-bottom: 32px;
     width: 100%;
     min-height: 155px;
     align-items: center;
   }
 
   .product-card__info--more {
-    margin-bottom: 102px;
+    margin-bottom: 68px;
   }
 
   .product-card__heading-link {
@@ -195,32 +217,35 @@
   .product-card__heading--more {
     font-size: 20px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 25px;
     width: 135px;
   }
 
   .product-card__text {
     margin-left: 40px;
     margin-right: 40px;
+    max-width: 60%;
     font-size: 16px;
     text-align: center;
   }
 
   .product-card__table {
+    margin-top: 10px;
     min-width: 250px;
     border-collapse: collapse;
     font-size: 16px;
   }
 
   .product-card__field {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     border-bottom: 1px solid #cdcdcd;
   }
 
   .product-card__value {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     border-bottom: 1px solid #cdcdcd;
   }
 
@@ -228,18 +253,14 @@
     width: 249px;
     min-height: 40px;
   }
-
-  .additional-list__btn {
-    width: 100%;
-    min-height: 40px;
-  }
 }
 
 @media (min-width: 1440px) {
   .product-card {
     width: 245px;
-    min-height: 515px;
-    margin-top: 60px;
+    min-height: 513px;
+    margin-top: 61px;
+    margin-bottom: 0;
     margin-left: 40px;
     margin-right: 40px;
     padding-top: 0;
@@ -248,7 +269,7 @@
   }
 
   .product-card--more {
-    margin-top: 144px;
+    margin-top: 141px;
     min-height: 432px;
     padding-top: 55px;
     padding-bottom: 39px;
@@ -260,20 +281,25 @@
 
   .product-card__info {
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
+  }
+
+  .product-card__heading {
+    margin-top: 36px;
   }
 
   .product-card__text {
     margin: 0;
-    margin-bottom: 71px;
+    margin-bottom: 0;
     width: 80%;
+    max-width: 80%;
   }
 
   .product-card__info--more {
-    margin-bottom: 38px;
+    margin-bottom: 70px;
     min-width: 170px;
     width: 100%;
-    padding-top: 65px;
+    padding-top: 74px;
   }
 
   .product-card__heading-link--more {

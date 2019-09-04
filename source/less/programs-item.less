@@ -3,7 +3,10 @@
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  padding: 25px 20px 23px 20px;
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-bottom: 22px;
+  padding-left: 20px;
   box-sizing: border-box;
   background-color: #f2f2f2;
 }
@@ -24,8 +27,8 @@
 
 .programs-item__heading::before {
   position: absolute;
-  left: 20px;
-  top: 20px;
+  left: 22px;
+  top: 26px;
   content: "";
   width: 50px;
   height: 50px;
@@ -36,8 +39,8 @@
 .programs-item__heading--mass::after {
   position: absolute;
   content: "";
-  left: 11px;
-  top: 30px;
+  left: 13px;
+  top: 35px;
   width: 67px;
   height: 28px;
   background: url("../img/icon-cat-pro.svg") no-repeat;
@@ -46,14 +49,15 @@
 .programs-item__heading--slim::after {
   position: absolute;
   content: "";
-  left: 28px;
-  top: 17px;
+  left: 29px;
+  top: 23px;
   width: 35px;
   height: 49px;
   background: url("../img/icon-cat-slim.svg") no-repeat;
 }
 
 .programs-item__text {
+  margin-top: 31px;
   margin-bottom: 0;
   box-sizing: border-box;
   border-bottom: 1px solid #d9d9d9;
@@ -61,13 +65,13 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
-  padding-bottom: 25px;
+  padding-bottom: 22px;
 }
 
 .programs-item__link {
   position: relative;
   display: flex;
-  margin-top: 20px;
+  margin-top: 18px;
   box-sizing: border-box;
   font-size: 16px;
   line-height: 16px;
@@ -114,7 +118,7 @@
   .programs-item__heading::before {
     left: auto;
     right: 60px;
-    top: calc(50% - 200px / 2);
+    top: calc(50% - 200px / 2 + 4px);
     content: "";
     width: 200px;
     height: 200px;
@@ -123,7 +127,7 @@
   .programs-item__heading--mass::after {
     left: auto;
     right: 28px;
-    top: calc(50% - 112px / 2);
+    top: calc(50% - 112px / 2 + 4px);
     width: 268px;
     height: 112px;
   }
@@ -131,7 +135,7 @@
   .programs-item__heading--slim::after {
     left: auto;
     right: 92px;
-    top: calc(50% - 194px / 2 - 16px);
+    top: calc(50% - 194px / 2 - 10px);
     width: 140px;
     height: 194px;
   }
@@ -139,18 +143,31 @@
   .programs-item__text {
     margin-top: 25px;
     margin-bottom: 25px;
-    width: calc(100% - 230px);
+    width: calc(100% - 254px);
     border: none;
     font-size: 16px;
     line-height: 24px;
   }
 
+  .programs-item__link {
+    margin-top: 12px;
+    font-size: 20px;
+  }
+
+  .programs-item__link::after {
+    right: -10px;
+  }
+
   .programs-item {
-    margin-top: 30px;
-    padding-top: 80px;
-    padding-bottom: 60px;
+    margin-top: 0;
+    padding-top: 74px;
+    padding-bottom: 64px;
     padding-left: 52px;
     padding-right: 60px;
+  }
+
+  .programs-item:not(:first-of-type) {
+    margin-top: 30px;
   }
 }
 
@@ -162,8 +179,17 @@
     padding-right: 52px;
   }
 
+  .programs-item:not(:first-of-type) {
+    margin-top: 0;
+  }
+
   .programs-item__heading {
+    margin-left: 20px;
     align-self: center;
+  }
+
+  .programs-item__heading--mass {
+    margin-left: 62px;
   }
 
   .programs-item__heading::before {
@@ -189,6 +215,10 @@
     top: 41px;
     width: 70px;
     height: 97px;
+  }
+
+  .programs-item__link {
+    margin-top: 8px;
   }
 
   .programs-item__text {
