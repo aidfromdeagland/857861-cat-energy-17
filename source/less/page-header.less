@@ -9,11 +9,11 @@
 }
 
 .page-header__logo-link {
-  margin-left: -85px;
+  margin-left: 0;
   display: flex;
   min-height: 65px;
-  min-width: 230px;
-  justify-content: center;
+  min-width: 320px;
+  justify-content: flex-start;
   align-items: center;
 
   &[href]:hover {
@@ -25,12 +25,17 @@
   }
 }
 
+.page-header__logo-image {
+  margin-left: 20px;
+}
+
 .page-header__nav--hide {
   display: none;
 }
 
 .page-header__menu-btn {
   position: absolute;
+  display: none;
   top: 23px;
   right: 20px;
   width: 24px;
@@ -45,10 +50,6 @@
   display: none;
 }
 
-.page-header__logo-image {
-  margin: 0;
-}
-
 @media (min-width: 768px) {
   .page-header {
     padding-top: 20px;
@@ -57,7 +58,15 @@
   }
 
   .page-header__logo-link {
-    margin-left: 0;
+    margin-left: 8px;
+    min-width: 230px;
+    width: 230px;
+  }
+
+  .page-header__logo-image {
+    margin-left: 12px;
+    margin-top: 2px;
+    height: 58px;
   }
 
   .page-header__nav--hide {
@@ -71,11 +80,17 @@
 
 @media (min-width: 1440px) {
   .page-header {
-    padding-top: 40px;
+    padding-top: 48px;
   }
 
   .page-header__logo-link {
     margin-left: 110px;
-    padding-right: 30px;
+    padding-right: 0;
+  }
+
+  .page-header__logo-image {
+    margin-left: 0;
+    height: 65px;
+    width: 200px;
   }
 }

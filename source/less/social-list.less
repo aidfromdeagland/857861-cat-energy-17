@@ -1,6 +1,6 @@
 .social-list {
-  margin: 0;
-  width: 100%;
+  margin: 0 20px;
+  width: calc(100% - 40px);
   display: flex;
   box-sizing: border-box;
   align-items: center;
@@ -8,6 +8,7 @@
   padding: 0;
   list-style: none;
   border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid #d9d9d9;
 }
 
 .social-list__item {
@@ -20,7 +21,7 @@
 }
 
 .social-list__link {
-  margin: 0 15px;
+  margin: 0 13px;
   display: flex;
   box-sizing: border-box;
   width: 28px;
@@ -30,6 +31,10 @@
   overflow: hidden;
   justify-content: center;
   align-items: center;
+}
+
+.social-list__icon {
+  fill: #666666;
 }
 
 .social-list__icon--vk {
@@ -60,6 +65,10 @@
   .social-list {
     width: 30%;
     border: none;
+  }
+
+  .social-list__link {
+    margin: 0 11px;
   }
 
   .social-list__icon--vk {

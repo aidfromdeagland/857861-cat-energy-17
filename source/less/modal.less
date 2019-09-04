@@ -1,0 +1,40 @@
+
+.modal {
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  display: none;
+}
+
+.modal--show {
+  display: block;
+}
+
+.modal--hide {
+  display: none;
+}
+
+.modal--order-goods {
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: 50%;
+  padding: 0 2em;
+  background-image: linear-gradient(#ffffff 20%, #f4f4f4 20%, #f4f4f4);
+  border-top: 7px solid #ff5357;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
+}
+
+.modal__btn-close {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  top: 9px;
+  right: 9px;
+  background: transparent url("../img/icon-close.svg");
+  border: none;
+}
+
+.modal__btn-close:hover {
+  cursor: pointer;
+}
