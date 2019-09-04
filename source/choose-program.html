@@ -41,8 +41,7 @@
       <h1 class="page-main__heading">Подбор программы</h1>
       <form class="program-form" action="https://echo.htmlacademy.ru" method="post">
         <p class="program-form__brief">Заполните анкету и мы подберем программу питания для вашего кота</p>
-        <fieldset class="program-form__cat-info cat-params">
-          <legend class="visually-hidden">Данные питомца</legend>
+        <div class="program-form__cat-info cat-params">
           <div class="cat-params__info">
             <label>
               <span class="cat-params__key">Имя:*</span>
@@ -71,11 +70,12 @@
               <span class="cat-params__key">Не знаю (нужен ваш совет)</span>
             </label>
           </div>
-        </fieldset>
-        <fieldset class="program-form__owner-info owner-params">
-          <legend class="owner-params__heading">
+        </div>
+        <div>
+        <div class="program-form__owner-info owner-params">
+          <h2 class="owner-params__heading">
             <span>Контактные данные (владельца кота)</span>
-          </legend>
+          </h2>
           <div class="owner-params__content">
             <label>
               <span class="owner-params__key">E-mail:*</span>
@@ -92,17 +92,17 @@
               </svg>
             </label>
           </div>
-        </fieldset>
-        <fieldset class="program-form__owner-comment">
-          <legend class="program-form__comment-heading">
+        </div>
+        <div class="program-form__owner-comment">
+          <h2 class="program-form__comment-heading">
             <span>Комментарий</span>
-          </legend>
+          </h2>
           <textarea class="program-form__comment-area" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
-        </fieldset>
-      <fieldset class="program-form__additional">
-        <legend class="program-form__additional-heading">
+        </div>
+      <div class="program-form__additional">
+        <h2 class="program-form__additional-heading">
           <span>Дополнительно</span>
-        </legend>
+        </h2>
         <div class="program-form__additional-content">
           <label>
             <input class="visually-hidden" type="checkbox"   value="add_fakesugar" name="option" checked>
@@ -121,7 +121,7 @@
             <span   class="program-form__additional-key">Витамины</span>
           </label>
         </div>
-      </fieldset>
+      </div>
       <div class="program-form__submit-wrap">
         <input class="program-form__submit btn" type="submit" value="Отправить заявку">
         <p class="program-form__remark">* — Обязательные поля</p>

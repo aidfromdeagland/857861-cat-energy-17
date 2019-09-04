@@ -132,7 +132,7 @@
   .page-footer__invite-wrap {
     position: absolute;
     top: 95px;
-    left: 110px;
+    left: calc(((100% - 1440px) / 2) + 110px);
     width: 570px;
     min-height: 201px;
     padding-left: 80px;
@@ -150,11 +150,13 @@
 
   .page-footer__map {
     min-height: 400px;
+    margin-left: calc(((100% - 1440px) / 2));
+    margin-right: calc(((100% - 1440px) / 2));
   }
 
   .page-footer__logo-link {
     width: 350px;
-    margin-left: 110px;
+    margin-left: calc(((100% - 1440px) / 2) + 110px);
     padding-left: 0;
     padding-top: 62px;
   }

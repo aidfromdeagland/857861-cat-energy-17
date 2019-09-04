@@ -1,7 +1,10 @@
 {
-  "name": "cat-energy-17",
-  "version": "17.0.0",
-  "private": true,
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "dependencies": {},
   "description": "Личный проект «Кэт энерджи» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
@@ -17,18 +20,6 @@
     "stylelint": "10.1.x",
     "stylelint-config-htmlacademy": "0.1.x"
   },
-  "scripts": {
-    "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
-    "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp css && gulp html-build && gulp js-build && gulp img-build && gulp svg-build && gulp fonts-build",
-    "start": "gulp start"
-  },
-  "browserslist": [
-    "last 2 versions",
-    "IE 11",
-    "Firefox ESR"
-  ],
   "editorconfig-cli": [
     "*.json",
     "*.js",
@@ -40,5 +31,13 @@
   "engines": {
     "node": "8.16"
   },
-  "dependencies": {}
+  "private": true,
+  "scripts": {
+    "build": "gulp build",
+    "editorconfig": "editorconfig-cli",
+    "start": "gulp start",
+    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
+    "test": "npm run editorconfig && npm run stylelint"
+  },
+  "version": "17.0.0"
 }
