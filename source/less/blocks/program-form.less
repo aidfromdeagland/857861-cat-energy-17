@@ -1,4 +1,5 @@
 .program-form {
+  width: 100%;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -11,16 +12,18 @@
 }
 
 .program-form__brief {
-  margin-left: 20px;
-  width: 80%;
+  margin-top: 0.8em;
+  margin-left: calc(50% - 160px + 20px);
+  margin-right: calc(50% - 160px + 20px);
+  width: 240px;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
 }
 
 .program-form__owner-comment {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: calc(50% - 160px + 20px);
+  margin-right: calc(50% - 160px + 20px);
   padding: 0;
   padding-bottom: 1.75em;
   display: flex;
@@ -41,6 +44,16 @@
 .program-form__comment-heading span {
   position: relative;
   display: inline-block;
+}
+
+.program-form__comment-heading span::before {
+  position: absolute;
+  content: "";
+  min-width: 100vw;
+  height: 3px;
+  background: #68b738;
+  right: calc(100% + 1em);
+  top: 0.55em;
 }
 
 .program-form__comment-heading span::after {
@@ -79,8 +92,8 @@
 }
 
 .program-form__additional {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: calc(50% - 160px + 20px);
+  margin-right: calc(50% - 160px + 20px);
   padding: 0;
   padding-bottom: 2em;
   display: flex;
@@ -110,6 +123,16 @@
 .program-form__additional-heading span {
   position: relative;
   display: inline-block;
+}
+
+.program-form__additional-heading span::before {
+  position: absolute;
+  content: "";
+  min-width: 100vw;
+  height: 3px;
+  background: #68b738;
+  right: calc(100% + 1em);
+  top: 0.55em;
 }
 
 .program-form__additional-heading span::after {
@@ -199,17 +222,17 @@
   }
 
   .program-form__brief {
-    margin-left: 70px;
-    margin-right: 70px;
-    margin-top: 0.9em;
-    width: 50%;
+    margin-left: calc(50% - 384px + 70px);
+    margin-right: calc(50% - 384px + 68px);
+    margin-top: 0.7em;
+    width: 384px;
     font-size: 20px;
     line-height: 30px;
   }
 
   .program-form__owner-comment {
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: calc(50% - 384px + 70px);
+    margin-right: calc(50% - 384px + 68px);
     font-size: 20px;
   }
 
@@ -236,7 +259,7 @@
 
   .program-form__comment-area {
     min-height: 174px;
-    padding: 0.6em 0.85em;
+    padding: 0.5em 0.9em;
     font-size: 20px;
     line-height: 30px;
   }
@@ -247,8 +270,8 @@
   }
 
   .program-form__additional {
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: calc(50% - 384px + 70px);
+    margin-right: calc(50% - 384px + 70px);
     flex-direction: row;
     flex-wrap: wrap;
     font-size: 20px;
@@ -256,7 +279,7 @@
 
   .program-form__additional-heading {
     margin-top: 0.85em;
-    margin-bottom: 0.75em;
+    margin-bottom: 0.7em;
     font-size: 36px;
     line-height: 36px;
   }
@@ -288,19 +311,20 @@
   }
 
   .program-form__additional label:not(:first-of-type) {
-    margin-top: 1.5em;
+    margin-top: 1.6em;
   }
 
   .program-form__additional .program-form__additional-key::before {
+    margin-right: 0.9em;
     width: 40px;
     height: 40px;
   }
 
   .program-form__submit-wrap {
-    margin-top: 1em;
-    margin-bottom: 72px;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-top: 0.825em;
+    margin-bottom: 74px;
+    margin-left: calc(50% - 384px + 70px);
+    margin-right: calc(50% - 384px + 70px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -335,7 +359,7 @@
   }
 
   .program-form__brief {
-    margin-top: 33px;
+    margin-top: 30px;
     margin-bottom: 24px;
     margin-left: 110px;
     margin-right: 110px;
@@ -364,7 +388,7 @@
 
   .program-form__additional-content {
     flex-direction: row;
-    justify-content: stretch;
+    justify-content: flex-start;
     flex-wrap: nowrap;
   }
 
@@ -376,28 +400,29 @@
   }
 
   .program-form__additional label {
-    width: auto;
-    max-width: 25%;
+    width: 245px;
+    max-width: 245px;
     margin: 0;
-    margin-right: auto;
+    margin-right: 0;
     margin-top: 1em;
   }
 
   .program-form__additional label:nth-of-type(2n) {
-    width: auto;
-    max-width: 25%;
+    width: 245px;
+    max-width: 245px;
   }
 
   .program-form__additional label:not(:first-of-type) {
     margin: 0;
     margin-top: 1em;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 0;
   }
 
   .program-form__submit-wrap {
     margin-left: 110px;
     margin-right: 110px;
+    margin-top: 1em;
     margin-bottom: 82px;
   }
 

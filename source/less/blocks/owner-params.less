@@ -1,11 +1,11 @@
 .owner-params {
   position: relative;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: calc(50% - 160px + 20px);
+  margin-right: calc(50% - 160px + 20px);
   display: flex;
   flex-direction: column;
   padding: 0;
-  padding-bottom: 1.8em;
+  padding-bottom: 1.7em;
   border: none;
   font-size: 16px;
 }
@@ -22,6 +22,16 @@
 .owner-params__heading span {
   position: relative;
   display: inline-block;
+}
+
+.owner-params__heading span::before {
+  position: absolute;
+  content: "";
+  min-width: 100vw;
+  height: 3px;
+  background: #68b738;
+  right: calc(100% + 1em);
+  top: 0.55em;
 }
 
 .owner-params__heading span::after {
@@ -53,13 +63,20 @@
 .owner-params input[type="tel"] {
   min-width: 150px;
   margin-left: 0.7em;
-  padding: 0.75em;
+  padding-top: 12px;
+  padding-bottom: 0.8em;
+  padding-left: 0.9em;
   border: 1px solid #e6e6e6;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   color: #444444;
   text-transform: uppercase;
+}
+
+.owner-params input[type="tel"] {
+  margin-left: 0.5em;
+  padding-left: 1em;
 }
 
 .owner-params input[type="email"]:hover,
@@ -94,7 +111,7 @@
 }
 
 .owner-params label:not(:first-of-type) {
-  margin-top: 0.875em;
+  margin-top: 0.9em;
 }
 
 .owner-params input {
@@ -127,43 +144,49 @@
 
 @media (min-width: 768px) {
   .owner-params {
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: calc(50% - 384px + 70px);
+    margin-right: calc(50% - 384px + 68px);
     font-size: 20px;
   }
 
   .owner-params__heading {
     max-width: 100%;
-    margin-top: 1.15em;
-    margin-bottom: 2.15em;
+    margin-top: 1.225em;
+    margin-bottom: 2.1em;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  .owner-params label:not(:first-of-type) {
+    margin-top: 1em;
+  }
+
+  .owner-params__heading span::before {
+    top: 0.6em;
   }
 
   .owner-params__heading span::after {
     top: 0.6em;
   }
 
-  .owner-params__heading span::before {
-    content: "";
-    position: absolute;
-    min-width: 100vw;
-    height: 3px;
-    background: #68b738;
-    right: calc(100% + 1em);
-    top: 0.6em;
-  }
-
   .owner-params input[type="email"],
   .owner-params input[type="tel"] {
     height: 52px;
+    margin-left: 1em;
     padding-left: 1em;
+    padding-top: 14px;
+    padding-bottom: 0.7em;
     font-size: 20px;
     line-height: 20px;
   }
 
-  .owner-params *::placeholder {
+  .owner-params input[type="tel"] {
+    margin-left: 0.7em;
     padding-left: 1em;
+  }
+
+  .owner-params *::placeholder {
+    padding-left: 0;
     font-family: "Oswald", "Arial", sans-serif;
     font-size: 20px;
   }
@@ -178,9 +201,9 @@
   }
 
   .owner-params__heading {
-    margin-top: 0;
+    margin-top: -1px;
     max-width: 100%;
-    margin-bottom: 1.6em;
+    margin-bottom: 1.55em;
   }
 
   .owner-params__content {
@@ -189,7 +212,7 @@
 
   .owner-params label {
     min-width: 570px;
-    margin-top: 0.875em;
+    margin-top: 1em;
     flex-grow: 1;
   }
 

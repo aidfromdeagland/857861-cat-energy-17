@@ -8,8 +8,8 @@
 }
 
 .cat-params__info {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: calc(50% - 160px + 20px);
+  padding-right: calc(50% - 160px + 20px);
 }
 
 .cat-params__key {
@@ -86,6 +86,8 @@
   margin-top: 1.5em;
   padding-top: 1.25em;
   padding-bottom: 1.25em;
+  padding-left: calc(50% - 160px);
+  padding-right: calc(50% - 160px);
   border-top: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
 }
@@ -129,12 +131,14 @@
 @media (min-width: 768px) {
   .cat-params {
     padding-top: 44px;
+    padding-left: calc(50% - 384px);
+    padding-right: calc(50% - 384px);
     font-size: 20px;
   }
 
   .cat-params__info {
     padding-left: 70px;
-    padding-right: 70px;
+    padding-right: 68px;
   }
 
   .cat-params__info label:not(:first-of-type) {
@@ -143,6 +147,7 @@
 
   .cat-params input[type="text"],
   .cat-params input[type="number"] {
+    margin-left: 0.95em;
     height: 52px;
     font-size: 20px;
     line-height: 20px;
@@ -156,13 +161,17 @@
 
   .cat-params__choise {
     margin-left: 70px;
-    margin-right: 70px;
+    margin-right: 68px;
     margin-top: 72px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 1.15em;
     border: 1px solid #ededed;
   }
 
+
   .cat-params__choise label:not(:first-of-type) {
-    margin-top: 0.6em;
+    margin-top: 0.65em;
   }
 
   .cat-params__choise .cat-params__key::before {
@@ -201,7 +210,11 @@
     max-width: none;
     display: flex;
     padding: 0;
-    padding-top: 1.25em;
-    padding-bottom: 1.25em;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+  }
+
+  .cat-params__choise label:not(:first-of-type) {
+    margin-top: 0.65em;
   }
 }

@@ -1,8 +1,8 @@
 .copyright {
   min-height: 76px;
   width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: calc(50% - 160px + 20px);
+  padding-right: calc(50% - 160px + 20px);
   display: flex;
   box-sizing: border-box;
   justify-content: space-between;
@@ -15,8 +15,8 @@
   line-height: 16px;
   color: #444444;
   text-decoration: none;
-  margin-top: 31px;
-  margin-bottom: 31px;
+  margin-top: 30px;
+  margin-bottom: 38px;
 
   &:active {
     opacity: 0.3;
@@ -48,8 +48,19 @@
 
 @media (min-width: 768px) {
   .copyright {
-    width: 30%;
+    margin-right: calc(50% - 384px);
+    width: 230px;
+    padding-left: 28px;
+    padding-right: 20px;
     justify-content: space-around;
+  }
+
+  .copyright__link {
+    margin-top: 32px;
+  }
+
+  .copyright__logo-link {
+    margin-top: 24px;
   }
 }
 

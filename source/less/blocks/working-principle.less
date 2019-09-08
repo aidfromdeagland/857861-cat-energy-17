@@ -1,7 +1,9 @@
 .working-principle {
-  max-width: calc(100% - 40px); // for IE11 mobile
+  width: 280px;
   display: flex;
-  margin: 0 20px;
+  margin: 0;
+  margin-left: calc(50% - 160px + 20px);
+  margin-right: calc(50% - 160px + 20px);
   padding: 0;
   box-sizing: border-box;
   flex-direction: column;
@@ -19,12 +21,11 @@
 
 @media (min-width: 768px) {
   .working-principle {
+    width: 708px;
     max-width: 100%;
     margin-top: 18px;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 30px;
-    padding-right: 30px;
+    margin-left: calc(50% - 384px + 30px);
+    margin-right: calc(50% - 384px + 30px);
     border-bottom: 1px solid #e6e6e6;
   }
 

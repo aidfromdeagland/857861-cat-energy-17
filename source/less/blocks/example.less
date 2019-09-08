@@ -1,9 +1,9 @@
 .example {
   width: 100%;
   margin: 0;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-bottom: 22px;
+  padding-left: calc(50% - 160px + 20px);
+  padding-right: calc(50% - 160px + 20px);
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -22,10 +22,12 @@
 
 .example__text {
   margin-top: 0;
-  margin-bottom: 2em;
+  margin-bottom: 1.8em;
   font-family: "Arial", sans-serif;
   font-size: 14px;
+  padding-right: 2px;
   line-height: 18px;
+  letter-spacing: 0;
   color: #444444;
 }
 
@@ -60,7 +62,7 @@
 }
 
 .example__stats-cost {
-  margin-top: 30px;
+  margin-top: 32px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -123,58 +125,135 @@
 
 .example__controls {
   position: relative;
-  margin-top: 30px;
+  margin-top: 32px;
   width: 80%;
   min-height: 20px;
+  padding-left: 12px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
 }
 
-.example__controls-zone {
-  position: relative;
-  z-index: 0;
-  margin-left: 19px;
-  margin-right: 19px;
-  width: 84px;
+.example__controls-range {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+//resets range styling
+.example__range {
+  margin: 0;
+  box-sizing: border-box;
+  padding-top: 0;
+  padding-bottom: 0;
+  appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 82px;
   height: 14px;
-  flex-shrink: 0;
-  display: block;
+  padding-left: 2px;
+  padding-right: 2px;
   background-color: #ffffff;
   border: 1px solid #cdcdcd;
-  border-radius: 7px;
+  border-radius: 6px;/* Otherwise white in Chrome */
 }
 
-.example__controls-zone::before {
-  position: absolute;
-  content: "";
-  z-index: 1;
-  display: block;
+.example__range:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+//styling of the thumb
+.example__range::-webkit-slider-thumb {
+  margin-top: 3px;
+  appearance: none;
+  border: none;
   width: 35px;
   height: 6px;
   border-radius: 3px;
-  background-color: #68b738;
-  left: 5px;
-  top: 50%;
-  transform: translateY(-50%);
+  background: #68b738;
+  cursor: pointer;
 }
 
-.example__controls-zone::after {
-  position: absolute;
-  content: "";
-  z-index: 1;
-  display: block;
+/* All the same stuff for Firefox */
+.example__range::-moz-range-thumb {
+  appearance: none;
+  border: none;
   width: 35px;
   height: 6px;
   border-radius: 3px;
-  background-color: #68b738;
-  right: 5px;
-  top: 50%;
-  transform: translateY(-50%);
+  background: #68b738;
+  cursor: pointer;
 }
+
+/* All the same stuff for IE */
+.example__range::-ms-thumb {
+  appearance: none;
+  border: none;
+  width: 35px;
+  height: 6px;
+  border-radius: 3px;
+  background: #68b738;
+  cursor: pointer;
+}
+
+//styling of the track
+.example__range::-webkit-slider-runnable-track {
+  appearance: none;
+  width: 70px;
+  height: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.example__range:focus::-webkit-slider-runnable-track {
+  background: #ffffff;
+}
+
+.example__range::-moz-range-track {
+  appearance: none;
+  width: 60px;
+  height: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+  opacity: 0;
+}
+
+.example__range::-ms-track {
+  appearance: none;
+  width: 70px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 12px;
+  border-color: transparent;
+  color: transparent;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+  opacity: 0;
+}
+
+.example__range::-ms-fill-lower {
+  background: #dcdcdc;
+}
+
+.example__range:focus::-ms-fill-lower {
+  background: #ffffff;
+}
+
+.example__range::-ms-fill-upper {
+  background: #ffffff;
+}
+
+.example__range:focus::-ms-fill-upper {
+  background: #ffffff;
+}
+//end of range styling
 
 .example__label-past,
 .example__label-now {
@@ -187,13 +266,13 @@
   width: 100%;
   height: 240px;
   background: url("../img/before-mobile@1x.png") center center no-repeat;
-  background-size: contain;
+  background-size: auto;
 }
 
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .example__before {
     background: url("../img/before-mobile@2x.png") center center no-repeat;
-    background-size: contain;
+    background-size: auto;
   }
 }
 
@@ -252,10 +331,16 @@
     line-height: 60px;
   }
 
+  .example__info-wrap {
+    padding-left: calc(50% - 384px);
+    padding-right: calc(50% - 384px);
+  }
+
   .example__text {
     margin-left: 30px;
     margin-right: 30px;
     margin-bottom: 54px;
+    padding-right: 10px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -305,6 +390,11 @@
     font-size: 20px;
   }
 
+  .example__stats-cost td {
+    margin-top: 7px;
+    margin-bottom: 4px;
+  }
+
   .example__stats-weight td,
   .example__stats-time td {
     width: 162px;
@@ -335,6 +425,8 @@
   .example__slider {
     margin-top: 46px;
     min-height: 640px;
+    padding-left: calc(50% - 384px);
+    padding-right: calc(50% - 384px);
     display: flex;
     background: linear-gradient(to top, #f2f2f2 462px, #ffffff 462px);
   }
@@ -345,8 +437,9 @@
 
   .example__controls {
     position: relative;
-    margin-top: 20px;
-    margin-bottom: 60px;
+    margin-top: 14px;
+    margin-bottom: 62px;
+    padding-left: 0;
     width: 75%;
     max-width: 75%;
     justify-content: space-between;
@@ -354,52 +447,172 @@
     line-height: 20px;
   }
 
-  .example__controls-zone {
+  .example__controls-range {
+    display: flex;
+  }
+
+  .example__range {
+    box-sizing: content-box;
+    padding-top: 0;
+    padding-bottom: 0;
+    appearance: none; /* Hides the slider so that custom slider can be made */
     width: 430px;
-    height: 5px;
-    background-color: #b0b0b0;
-    margin: 0;
+    height: 36px;
+    padding-left: 2px;
+    padding-right: 2px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;/* Otherwise white in Chrome */
   }
 
-  .example__controls-zone::before {
+  .example__range:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+
+  //styling of the thumb
+  .example__range::-webkit-slider-thumb {
+    box-sizing: content-box;
+    appearance: none;
+    margin-top: -14px;
+    border: 1px solid #cecece;
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background-color: #68b738;
-    left: 0;
-    top: 50%;
-    border: 11px solid #ffffff;
-    box-shadow: 0 0 2px 2px #b0b0b0;
-    transform: translateY(-50%);
+    background: radial-gradient(#68b738 4px, #ffffff 4px);
+    cursor: pointer;
+    box-shadow: 0 2px 3px 0 #bebebe;
   }
 
-  .example__controls-zone::after {
+  /* All the same stuff for Firefox */
+  .example__range::-moz-range-thumb {
+    box-sizing: content-box;
+    border: 1px solid #cecece;
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background-color: #68b738;
-    right: 0;
-    top: 50%;
-    border: 11px solid #ffffff;
-    box-shadow: 0 0 2px 2px #b0b0b0;
-    transform: translateY(-50%);
+    background: radial-gradient(#68b738 4px, #ffffff 4px);
+    cursor: pointer;
+    box-shadow: 0 2px 3px 0 #bebebe;
+  }
+
+  /* All the same stuff for IE */
+  .example__range::-ms-thumb {
+    box-sizing: content-box;
+    border: 1px solid #cecece;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: radial-gradient(#68b738 4px, #ffffff 4px);
+    cursor: pointer;
+    box-shadow: 0 2px 3px 0 #bebebe;
+  }
+
+  //styling of the track
+  .example__range::-webkit-slider-runnable-track {
+    box-sizing: content-box;
+    width: 100%;
+    height: 6px;
+    padding: 0;
+    cursor: pointer;
+    background: #dcdcdc;
+    border: none;
+    border-radius: 3px;
+    opacity: 1;
+  }
+
+  .example__range:focus::-webkit-slider-runnable-track {
+    background: #dcdcdc;
+  }
+
+  .example__range::-moz-range-track {
+    box-sizing: content-box;
+    width: 100%;
+    height: 6px;
+    padding: 0;
+    cursor: pointer;
+    background: #dcdcdc;
+    border: none;
+    border-radius: 3px;
+    opacity: 1;
+  }
+
+  .example__range::-ms-track {
+    box-sizing: content-box;
+    width: 100%;
+    height: 6px;
+    padding: 0;
+    cursor: pointer;
+    border-color: transparent;
+    background: #dcdcdc;
+    border: none;
+    color: #dcdcdc;
+    opacity: 1;
+  }
+
+  .example__range::-ms-fill-lower {
+    background: #dcdcdc;
+  }
+
+  .example__range:focus::-ms-fill-lower {
+    background: #dcdcdc;
+  }
+
+  .example__range::-ms-fill-upper {
+    background: #dcdcdc;
+  }
+
+  .example__range:focus::-ms-fill-upper {
+    background: #dcdcdc;
+  }
+
+  .example__range::-webkit-slider-thumb:hover {
+    box-shadow: 0 4px 5px 0 #bebebe;
+  }
+
+  .example__range::-moz-range-thumb:hover {
+    box-shadow: 0 4px 5px 0 #bebebe;
+  }
+
+  .example__range::-ms-thumb:hover {
+    box-shadow: 0 4px 5px 0 #bebebe;
+  }
+
+  .example__range::-webkit-slider-thumb:active {
+    border: 2px solid #68b738;
+    width: 31px;
+    height: 31px;
+    box-shadow: 0 4px 5px 0 #bebebe;
+  }
+
+  .example__range::-moz-range-thumb:active {
+    border: 2px solid #68b738;
+    width: 31px;
+    height: 31px;
+    box-shadow: 0 4px 5px 0 #adadad;
+  }
+
+  .example__range::-ms-thumb:active {
+    border: 2px solid #68b738;
+    width: 31px;
+    height: 31px;
+    box-shadow: 0 4px 5px 0 #adadad;
   }
 
   .example__controls span {
-    padding-bottom: 5px;
-    border-bottom: 1px dotted #b8b8b8;
+    padding-bottom: 2px;
+    border-bottom: 1px dotted #adadad;
   }
 
   .example__before {
     height: 520px;
     background: url("../img/before-tablet@1x.png") center center no-repeat;
-    background-size: contain;
+    background-size: auto;
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .example__before {
       background: url("../img/before-tablet@2x.png") center center no-repeat;
-      background-size: contain;
+      background-size: auto;
     }
   }
 
@@ -432,6 +645,8 @@
   .example__info-wrap {
     width: 40%;
     max-width: 40%;
+    padding-left: calc(50% - 720px);
+    padding-right: calc(50% - 720px);
   }
 
   .example__heading {
@@ -445,6 +660,7 @@
     margin-bottom: 68px;
     margin-right: 0;
     width: 90%;
+    padding-right: 0;
   }
 
   .example__stats {
@@ -458,12 +674,17 @@
   }
 
   .example__stats-cost {
-    margin-top: 62px;
+    margin-top: 54px;
     width: 91%;
     min-height: 20px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .example__stats-cost td {
+    margin-top: 5px;
+    margin-right: 5px;
   }
 
   .example__stats-weight th,
@@ -472,9 +693,11 @@
   }
 
   .example__slider {
-    width: 60%;
+    width: 732px;
     margin-top: 0;
     min-height: 520px;
+    padding-left: 0;
+    padding-right: 0;
     display: flex;
     background: none;
   }
@@ -486,9 +709,10 @@
   }
 
   .example__controls {
-    width: 78%;
-    max-width: 78%;
-    margin-top: 48px;
+    width: 570px;
+    max-width: 570px;
+    margin-top: 38px;
+    margin-bottom: 52px;
     margin-left: 160px;
   }
 

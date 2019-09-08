@@ -13,19 +13,32 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 30px 20px;
+  padding-top: 28px;
+  padding-bottom: 26px;
+  padding-left: calc(50% - 160px + 20px);
+  padding-right: calc(50% - 160px + 20px);
   background-color: #f2f2f2;
+}
+
+.page-footer__invite-wrap--index {
+  background-color: #ffffff;
 }
 
 .page-footer__invitation {
   margin: 0;
   display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   width: 50%;
   max-width: 160px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+.page-footer__invitation > span {
+  display: inline-block;
+  width: 100%;
 }
 
 .page-footer__address {
@@ -50,7 +63,8 @@
   justify-content: center;
   box-sizing: border-box;
   width: 100%;
-  padding: 32px 0;
+  padding-top: 38px;
+  padding-bottom: 30px;
 
   &[href]:hover {
     opacity: 0.8;
@@ -83,17 +97,23 @@
 
   .page-footer__logo-link {
     margin-top: 0;
-    width: 30%;
-    padding: 64px 0;
+    margin-left: calc(50% - 384px);
+    margin-right: 66px;
+    width: 160px;
+    padding-top: 62px;
+    padding-bottom: 66px;
     padding-left: 30px;
+    padding-right: 0;
     justify-content: flex-start;
     align-items: center;
     border: none;
   }
 
   .page-footer__invite-wrap {
-    padding: 65px 70px;
-    padding-bottom: 60px;
+    padding-top: 62px;
+    padding-bottom: 59px;
+    padding-left: calc(50% - 384px + 70px);
+    padding-right: calc(50% - 384px + 70px);
     background-color: #f2f2f2;
   }
 
@@ -107,6 +127,7 @@
   }
 
   .page-footer__address {
+    padding-top: 2px;
     text-align: right;
     font-size: 16px;
     line-height: 20px;
@@ -114,7 +135,7 @@
   }
 
   .page-footer__address p {
-    margin-top: 1em;
+    margin-top: 1.2em;
     width: 100%;
     text-align: right;
   }
@@ -135,12 +156,13 @@
     left: calc(((100% - 1440px) / 2) + 110px);
     width: 570px;
     min-height: 201px;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 76px;
+    padding-right: 84px;
     background-color: #ffffff;
   }
 
   .page-footer__address {
+    padding-top: 0;
     text-align: left;
   }
 
@@ -150,13 +172,13 @@
 
   .page-footer__map {
     min-height: 400px;
-    margin-left: calc(((100% - 1440px) / 2));
-    margin-right: calc(((100% - 1440px) / 2));
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .page-footer__logo-link {
-    width: 350px;
-    margin-left: calc(((100% - 1440px) / 2) + 110px);
+    width: 150px;
+    margin-left: calc(50% - 720px + 110px);
     padding-left: 0;
     padding-top: 62px;
   }

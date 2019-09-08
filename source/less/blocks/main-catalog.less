@@ -1,9 +1,18 @@
 .main-catalog {
+  margin-top: -3px;
   width: 100%;
+  padding-left: calc(50% - 160px);
+  padding-right: calc(50% - 160px);
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .main-catalog {
+    padding-left: calc(50% - 384px);
+    padding-right: calc(50% - 384px);
+  }
 }
 
 @media (min-width: 1440px) {

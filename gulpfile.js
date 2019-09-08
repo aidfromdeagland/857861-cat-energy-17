@@ -78,7 +78,7 @@ gulp.task("build-img", function () {
 });
 
 gulp.task("build-svg", function () {
-  return gulp.src(["source/img/logo-*.svg", "source/img/sprites.svg", "source/img/icon-cat-*.svg", "source/img/icon-tick.svg"])
+  return gulp.src(["source/img/logo-*.svg", "source/img/sprites.svg", "source/img/icon-cat-*.svg", "source/img/icon-tick.svg", "source/img/icon-mobile-menu.svg", "source/img/icon-close.svg"])
     .pipe(gulp.dest("build/img"))
 });
 

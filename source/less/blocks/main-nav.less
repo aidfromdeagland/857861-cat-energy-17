@@ -3,11 +3,25 @@
   width: 100%;
 }
 
+.main-nav--closed {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+  }
+
+  .main-nav--closed {
+    display: flex;
+  }
+}
+
 @media (min-width: 1440px) {
   .main-nav {
     z-index: 1;
     margin: 0;
-    padding-left: 112px;
+    padding-left: 98px;
     padding-right: 110px;
     width: 50%;
     justify-content: flex-end;
