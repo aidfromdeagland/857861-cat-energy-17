@@ -263,24 +263,30 @@
 .example__before {
   position: absolute;
   display: block;
-  width: 100%;
-  height: 240px;
+  left: -20px;
+  top: -20px;
+  max-width: 320px;
+  width: 320px;
+  height: 280px;
   background: url("../img/before-mobile@1x.png") center center no-repeat;
-  background-size: auto;
+  background-size: contain;
 }
 
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .example__before {
     background: url("../img/before-mobile@2x.png") center center no-repeat;
-    background-size: auto;
+    background-size: contain;
   }
 }
 
 .example__after {
   position: absolute;
   display: block;
-  width: 100%;
-  min-height: 240px;
+  left: -20px;
+  top: -20px;
+  max-width: 320px;
+  width: 320px;
+  height: 280px;
   background: url("../img/after-mobile@1x.png") center center no-repeat;
   background-size: contain;
 }
@@ -604,20 +610,28 @@
   }
 
   .example__before {
-    height: 520px;
+    left: 46px;
+    top: 5px;
+    max-width: 690px;
+    width: 690px;
+    height: 517px;
     background: url("../img/before-tablet@1x.png") center center no-repeat;
-    background-size: auto;
+    background-size: contain;
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .example__before {
       background: url("../img/before-tablet@2x.png") center center no-repeat;
-      background-size: auto;
+      background-size: contain;
     }
   }
 
   .example__after {
-    height: 520px;
+    left: 47px;
+    top: 5px;
+    max-width: 690px;
+    width: 690px;
+    height: 517px;
     background: url("../img/after-tablet@1x.png") center center no-repeat;
     background-size: contain;
   }
@@ -717,7 +731,8 @@
   }
 
   .example__before {
-    height: 520px;
+    left: 82px;
+    top: 7px;
     background: url("../img/before-desktop@1x.png") center center no-repeat;
     background-size: contain;
   }
@@ -730,7 +745,8 @@
   }
 
   .example__after {
-    height: 520px;
+    left: 82px;
+    top: 7px;
     background: url("../img/after-desktop@1x.png") center center no-repeat;
     background-size: contain;
   }
